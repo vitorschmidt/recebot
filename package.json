@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node --env-file=.env index.js",
     "dev": "node index.js",
-    "build": "node --env-file=.env index.js"
+    "build": "node index.js"
   },
   "author": "",
   "license": "ISC",
