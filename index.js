@@ -1,5 +1,10 @@
 import { Client, GatewayIntentBits } from "discord.js";
 import { handleCatCommand } from "./cats.js";
+import dotenv from "dotenv";
+
+if (process.env.NODE_ENV !== "production") {
+  dotenv.config();
+}
 
 const client = new Client({
   intents: [
