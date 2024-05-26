@@ -4,8 +4,13 @@
   "description": "discord bot",
   "main": "index.js",
   "type": "module",
+  "engines": {
+    "node": "20"
+  },
   "scripts": {
-    "start": "node index.js"
+    "start": "node --env-file=.env index.js",
+    "dev": "node index.js",
+    "build": "node --env-file=.env index.js"
   },
   "author": "",
   "license": "ISC",
