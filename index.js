@@ -1,13 +1,22 @@
 import { Client, GatewayIntentBits } from "discord.js";
-
-console.log("aham");
+import { handleCatCommand } from "./cats.js";
 
 const client = new Client({
-  intents: [GatewayIntentBits.GuildMessages, GatewayIntentBits.Guilds],
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent,
+  ],
 });
+
+const prefix = "~";
 
 client.login(process.env.DISCORD_TOKEN);
 
 client.on("ready", () => {
   console.log("O pai ta ON (online)");
+});
+
+client.on("messageCreate", (message) => {
+  handleCatCommand(message, prefix);
 });
