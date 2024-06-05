@@ -11,7 +11,7 @@ const client = new Client({
     GatewayIntentBits.MessageContent,
   ],
 });
-
+console.log('teste')
 const prefix = "~";
 
 client.login(process.env.DISCORD_TOKEN);
