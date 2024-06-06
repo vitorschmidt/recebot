@@ -17,7 +17,7 @@ const prefix = "~";
 client.login(process.env.DISCORD_TOKEN);
 
 client.on("ready", () => {
-  console.log("O pai ta ON (online)");
+  console.log("O pai ta ON (onlinea)");
 });
 
 client.on("messageCreate", (message) => {
